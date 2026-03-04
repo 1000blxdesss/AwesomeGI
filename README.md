@@ -75,3 +75,6 @@
 
 ### Profiles (1)
 - [**Save Setting**](MAIN/Profiles/save-setting.md)
+
+<img width="1684" height="1035" alt="image" src="https://github.com/user-attachments/assets/e3c19d5c-29f0-4eb0-9c2a-1fae8a3dfdf2" />
+
