@@ -9,6 +9,8 @@
 
 > Меню открывается на RShift, функции имеют доп. настройки, для этого разворачивайте их по ПКМ.
 
+На данный момент относительно стабильно работает только на win10.
+
 ### Default (3)
 - [**Fly In Main Menu**](MAIN/Default/fly-in-main-menu.md)
 - [**Flash off**](MAIN/Default/flash-off.md)
