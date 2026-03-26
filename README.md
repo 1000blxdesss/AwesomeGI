@@ -1,5 +1,5 @@
 # AwesomeGI
-
+Download: https://github.com/1000blxdesss/AwesomeGI/releases/download/GI/publish.rar
 ## RU
 Если вы хотите лицезреть еще какие-то новые фичи или оставить запрос на ошибку, то жалуйтесь сюда: https://discord.gg/z7EP5CpFTA
 
