@@ -1,5 +1,7 @@
 [!!!Click!!!](https://github.com/1000blxdesss/Genshin-Impact-Dump-collection)
 
+Discord: https://discord.gg/z7EP5CpFTA
+
 ### Default (3)
 - [**Fly In Main Menu**](MAIN/Default/fly-in-main-menu.md)
 - [**Flash off**](MAIN/Default/flash-off.md)
