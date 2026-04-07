@@ -1,0 +1,3 @@
+#include "resource.h"
+IDR_LOGINGTEXTURE RCDATA "logintexture.jpg"
+IDR_AWES_GIF      RCDATA "awes.gif"

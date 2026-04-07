@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{160fd541-54d5-4168-989b-1f7519884745}</ProjectGuid>
+    <RootNamespace>awesomeimpact</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;AWESOMEIMPACT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;AWESOMEIMPACT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_DEBUG;AWESOMEIMPACT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>NDEBUG;AWESOMEIMPACT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(ProjectDir)MinHook\lib\libMinHook.x64.lib</AdditionalDependencies>
+      <ProgramDatabaseFile />
+      <AdditionalOptions>/EMITTOOLVERSIONINFO:NO /RELEASE %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Features\Combat\CombatProp.h" />
+    <ClInclude Include="core\App.h" />
+    <ClInclude Include="Features\Combat\GodMode.h" />
+    <ClInclude Include="Features\Combat\InstantBowFeature.h" />
+    <ClInclude Include="Features\Combat\KillAura.h" />
+    <ClInclude Include="Features\FeatureBase.h" />
+    <ClInclude Include="Features\Fun\coolMoon.h" />
+    <ClInclude Include="Features\Fun\FlyMainMenu.h" />
+    <ClInclude Include="Features\Fun\Minecraft.h" />
+    <ClInclude Include="Features\Misc\PenisDraw.h" />
+    <ClInclude Include="Features\Move\BetteFly.h" />
+    <ClInclude Include="Features\Visual\SkinChangerFeature.h" />
+    <ClInclude Include="Features\Visual\Trail.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="GUI\gui.h" />
+    <ClInclude Include="GUI\imconfig.h" />
+    <ClInclude Include="GUI\imgui.h" />
+    <ClInclude Include="GUI\imgui_impl_dx11.h" />
+    <ClInclude Include="GUI\imgui_impl_win32.h" />
+    <ClInclude Include="GUI\imgui_internal.h" />
+    <ClInclude Include="GUI\imstb_rectpack.h" />
+    <ClInclude Include="GUI\imstb_textedit.h" />
+    <ClInclude Include="GUI\imstb_truetype.h" />
+    <ClInclude Include="GUI\kiero.h" />
+    <ClInclude Include="Logger\Logger.h" />
+    <ClInclude Include="MinHook\include\MinHook.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="Utils\ComPtr.h" />
+    <ClInclude Include="Utils\HookRegistry.h" />
+    <ClInclude Include="Utils\hookUtils.h" />
+    <ClInclude Include="Features\Combat\AttackMultiplier.h" />
+    <ClInclude Include="Features\Combat\FriendlyFire.h" />
+    <ClInclude Include="Features\Combat\InfiniteSkills.h" />
+    <ClInclude Include="Features\Combat\VoidAura.h" />
+    <ClInclude Include="Features\Misc\ObjectUnlocker.h" />
+    <ClInclude Include="Features\Misc\AutoDestroy.h" />
+    <ClInclude Include="Features\Misc\AutoDialog.h" />
+    <ClInclude Include="Features\Misc\BoobaScale.h" />
+    <ClInclude Include="Features\Misc\FpsUnlock.h" />
+    <ClInclude Include="Features\Misc\KeepCamera.h" />
+    <ClInclude Include="Features\Misc\LootMagnet.h" />
+    <ClInclude Include="Features\Misc\LootManager.h" />
+    <ClInclude Include="Features\Misc\OpenChest.h" />
+    <ClInclude Include="Features\Misc\OpenPose.h" />
+    <ClInclude Include="Features\Misc\SkipCutscenes.h" />
+    <ClInclude Include="Features\Misc\CustomElement.h" />
+    <ClInclude Include="Features\Misc\MapSettings.h" />
+    <ClInclude Include="Features\Misc\SpawnSomething.h" />
+    <ClInclude Include="Features\Misc\UnlockStatues.h" />
+    <ClInclude Include="Features\Misc\Uncensored.h" />
+    <ClInclude Include="Features\Move\AirJump.h" />
+    <ClInclude Include="Features\Move\BowTp.h" />
+    <ClInclude Include="Features\Move\CustomTp.h" />
+    <ClInclude Include="Features\Move\InfiniteStamina.h" />
+    <ClInclude Include="Features\Move\MapTp.h" />
+    <ClInclude Include="Features\Move\NoClip.h" />
+    <ClInclude Include="Features\Move\Jesus.h" />
+    <ClInclude Include="Features\Move\Spin.h" />
+    <ClInclude Include="Features\Move\SprintDelay.h" />
+    <ClInclude Include="Features\Move\Velocity.h" />
+    <ClInclude Include="Features\Profiles\DefaultProfile.h" />
+    <ClInclude Include="Features\Visual\ArrayList.h" />
+    <ClInclude Include="Features\Visual\Atmosphere.h" />
+    <ClInclude Include="Features\Visual\CameraSettings.h" />
+    <ClInclude Include="Features\Visual\Chams.h" />
+    <ClInclude Include="Features\Visual\Esp.h" />
+    <ClInclude Include="Features\Visual\FpsOverlay.h" />
+    <ClInclude Include="Features\Visual\GuiStyle.h" />
+    <ClInclude Include="Features\Visual\JumpCircle.h" />
+    <ClInclude Include="Features\Visual\NameTags.h" />
+    <ClInclude Include="Features\Visual\ProfileChanger.h" />
+    <ClInclude Include="Features\Visual\SkeletonEsp.h" />
+    <ClInclude Include="Features\Visual\TextureChanger.h" />
+    <ClInclude Include="Features\Visual\CustomEffect.h" />
+    <ClInclude Include="Features\Visual\Wireframe.h" />
+    <ClInclude Include="Utils\il2cpp-api-types.h" />
+    <ClInclude Include="Utils\test01.h" />
+    <ClInclude Include="Utils\Rc\resource.h" />
+    <ClInclude Include="Utils\stb_image.h" />
+    <ClInclude Include="Utils\stb_image_resize2.h" />
+    <ClInclude Include="Utils\stb_image_write.h" />
+    <ClInclude Include="Utils\test02.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Features\Combat\CombatProp.cpp" />
+    <ClCompile Include="core\App.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Features\Combat\GodMode.cpp" />
+    <ClCompile Include="Features\Combat\InstantBowFeature.cpp" />
+    <ClCompile Include="Features\Combat\KillAura.cpp" />
+    <ClCompile Include="Features\FeatureBase.cpp" />
+    <ClCompile Include="Features\Fun\coolMoon.cpp" />
+    <ClCompile Include="Features\Fun\DrawLogo.cpp" />
+    <ClCompile Include="Features\Fun\FlyMainMenu.cpp" />
+    <ClCompile Include="Features\Fun\helloWorld.cpp" />
+    <ClCompile Include="Features\Fun\Minecraft.cpp" />
+    <ClCompile Include="Features\Misc\PenisDraw.cpp" />
+    <ClCompile Include="Features\Move\BetteFly.cpp" />
+    <ClCompile Include="Features\Visual\SkinChangerFeature.cpp" />
+    <ClCompile Include="Features\Visual\Trail.cpp" />
+    <ClCompile Include="GUI\gui.cpp" />
+    <ClCompile Include="GUI\imgui.cpp" />
+    <ClCompile Include="GUI\imgui_demo.cpp" />
+    <ClCompile Include="GUI\imgui_draw.cpp" />
+    <ClCompile Include="GUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="GUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="GUI\imgui_tables.cpp" />
+    <ClCompile Include="GUI\imgui_widgets.cpp" />
+    <ClCompile Include="GUI\kiero.cpp" />
+    <ClCompile Include="Logger\Logger.cpp" />
+    <ClCompile Include="Features\Combat\AttackMultiplier.cpp" />
+    <ClCompile Include="Features\Combat\FriendlyFire.cpp" />
+    <ClCompile Include="Features\Combat\InfiniteSkills.cpp" />
+    <ClCompile Include="Features\Combat\VoidAura.cpp" />
+    <ClCompile Include="Features\Misc\ObjectUnlocker.cpp" />
+    <ClCompile Include="Features\Misc\AutoDestroy.cpp" />
+    <ClCompile Include="Features\Misc\AutoDialog.cpp" />
+    <ClCompile Include="Features\Misc\BoobaScale.cpp" />
+    <ClCompile Include="Features\Misc\FpsUnlock.cpp" />
+    <ClCompile Include="Features\Misc\KeepCamera.cpp" />
+    <ClCompile Include="Features\Misc\LootMagnet.cpp" />
+    <ClCompile Include="Features\Misc\LootManager.cpp" />
+    <ClCompile Include="Features\Misc\OpenChest.cpp" />
+    <ClCompile Include="Features\Misc\OpenPose.cpp" />
+    <ClCompile Include="Features\Misc\SkipCutscenes.cpp" />
+    <ClCompile Include="Features\Misc\CustomElement.cpp" />
+    <ClCompile Include="Features\Misc\MapSettings.cpp" />
+    <ClCompile Include="Features\Misc\SpawnSomething.cpp" />
+    <ClCompile Include="Features\Misc\UnlockStatues.cpp" />
+    <ClCompile Include="Features\Misc\Uncensored.cpp" />
+    <ClCompile Include="Features\Move\AirJump.cpp" />
+    <ClCompile Include="Features\Move\BowTp.cpp" />
+    <ClCompile Include="Features\Move\CustomTp.cpp" />
+    <ClCompile Include="Features\Move\InfiniteStamina.cpp" />
+    <ClCompile Include="Features\Move\MapTp.cpp" />
+    <ClCompile Include="Features\Move\NoClip.cpp" />
+    <ClCompile Include="Features\Move\Jesus.cpp" />
+    <ClCompile Include="Features\Move\Spin.cpp" />
+    <ClCompile Include="Features\Move\SprintDelay.cpp" />
+    <ClCompile Include="Features\Move\Velocity.cpp" />
+    <ClCompile Include="Features\Profiles\DefaultProfile.cpp" />
+    <ClCompile Include="Features\Visual\ArrayList.cpp" />
+    <ClCompile Include="Features\Visual\Atmosphere.cpp" />
+    <ClCompile Include="Features\Visual\CameraSettings.cpp" />
+    <ClCompile Include="Features\Visual\Chams.cpp" />
+    <ClCompile Include="Features\Visual\Esp.cpp" />
+    <ClCompile Include="Features\Visual\FpsOverlay.cpp" />
+    <ClCompile Include="Features\Visual\GuiStyle.cpp" />
+    <ClCompile Include="Features\Visual\JumpCircle.cpp" />
+    <ClCompile Include="Features\Visual\NameTags.cpp" />
+    <ClCompile Include="Features\Visual\ProfileChanger.cpp" />
+    <ClCompile Include="Features\Visual\SkeletonEsp.cpp" />
+    <ClCompile Include="Features\Visual\TextureChanger.cpp" />
+    <ClCompile Include="Features\Visual\CustomEffect.cpp" />
+    <ClCompile Include="Features\Visual\Wireframe.cpp" />
+    <ClCompile Include="Utils\stb_image_impl.cpp" />
+    <ClCompile Include="Utils\HookRegistry.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="MinHook\lib\libMinHook.x64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="core\GameHooks.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Utils\Rc\resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Utils\Rc\logintexture.jpg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

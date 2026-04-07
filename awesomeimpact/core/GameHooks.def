@@ -1,0 +1,56 @@
+﻿// временно
+GAME_HOOK(offsets::MoleMole::LCBaseCombat::FireBeingHitEvent, void, FireBeingHitEvent, void*, uint32_t, void*)
+GAME_HOOK(offsets::MoleMole::Miscs::CheckTargetAttackable, bool, CheckTargetAttackable, void*, void*, bool)
+GAME_HOOK(offsets::MoleMole::VCHumanoidMove::NotifyLandVelocity, void, NotifyLandVelocity, void*, Vector3, float)
+GAME_HOOK(offsets::MoleMole::ActorAbilityPlugin::SetDynamicFloatWithRange, void, SetDynamicFloatWithRange, void*, uintptr_t, float, float, float, bool, bool)
+GAME_HOOK(offsets::MoleMole::LCAvatarCombat::TickSkillCd, void, TickSkillCd, void*,float)
+GAME_HOOK(offsets::MoleMole::LCAvatarCombat::IsEnergyMax, bool, IsEnergyMax, void*)
+GAME_HOOK(offsets::MoleMole::BaseMoveSyncPlugin::ConvertSyncTaskToMotionInfo, void, ConvertSyncTaskToMotionInfo, void*)
+GAME_HOOK(offsets::MoleMole::GameManager::Update, void*, Update, void*)
+GAME_HOOK(offsets::MoleMole::HumanoidMoveFSM::LateTick, void, HumanoidMoveFSM_LateTick, void*, float)
+GAME_HOOK(offsets::MoleMole::DataItem::HandleNormalProp, void, HandleNormalProp, void*, uint32_t, int64_t, int)
+GAME_HOOK(offsets::MoleMole::MonoJumpButton::OnRealPointerDown, void, OnRealPointerDown, void*, void*)
+GAME_HOOK(offsets::MoleMole::MonoJumpButton::OnPointerUp, void, OnPointerUp, void*, void*)
+GAME_HOOK(offsets::MoleMole::VCBillboard::UpdateTransform, void, VCBillboard_UpdateTransform, void*, void*)
+GAME_HOOK(offsets::MoleMole::VCBillboard::NeedHideBillboard, bool, VCBillboard_NeedHideBillboard, void*)
+GAME_HOOK(offsets::MoleMole::MonoBillboard::SetHPRatio, void, MonoBillboard_SetHPRatio, void*, float, bool)
+GAME_HOOK(offsets::MoleMole::EntityManager::AddEntity, void , AddEntity, void*, void*)
+GAME_HOOK(offsets::MoleMole::InLevelMapPageContext::OnMapClicked, void, OnMapClicked, void*, Vector2)
+GAME_HOOK(offsets::MoleMole::InLevelMapPageContext::OnMarkClicked, void, OnMarkClicked, void*, void*)
+GAME_HOOK(offsets::MoleMole::EffectManager::AttachProxyWithEffect, void, EffectManager_AttachProxyWithEffect, void*, void*, void*)
+GAME_HOOK(offsets::MoleMole::MonoEffect::ShowRenders, void, MonoEffect_ShowRenders, void*, bool)
+GAME_HOOK(offsets::MoleMole::CinemachineBrain::FlushToOutpuCamera, void, FlushToOutpuCamera, void*)
+GAME_HOOK(offsets::MoleMole::LCAbilityElement::ReduceModifierDurability, void, ReduceModifierDurability, void*, int, float, Nullable<float>)
+GAME_HOOK(offsets::MoleMole::MonoInLevelPlayerProfilePageV3::get_logoutButton, void*, MonoInLevelPlayerProfilePageV3_get_logoutButton, void*)
+GAME_HOOK(offsets::MoleMole::MonoInLevelPlayerProfilePageV3::get_logoutButtonMask, void*, MonoInLevelPlayerProfilePageV3_get_logoutButtonMask, void*)
+GAME_HOOK(offsets::MoleMole::___::____, uint32_t, _, int32_t, int32_t, bool)
+
+GAME_HOOK(offsets::MoleMole::MonoTalkDialog::OnEnable, void, MonoTalkDialog_OnEnable, void*)
+GAME_HOOK(offsets::MoleMole::MonoTalkDialog::HideDialog, void, MonoTalkDialog_HideDialog, void*, bool)
+GAME_HOOK(offsets::MoleMole::InLevelCutScenePageContext::UpdateView, void, InLevelCutScenePageContext_UpdateView, void*)
+GAME_HOOK(offsets::MoleMole::InLevelCutScenePageContext::ClearView, void, CutScene_ClearView, void*)
+
+GAME_HOOK(offsets::MoleMole::LCSelectPickup::AddInteeBtnByID, void*, LCSelectPickup_AddInteeBtnByID, void*, void*)
+GAME_HOOK(offsets::MoleMole::LCSelectPickup::IsInPosition, bool, LCSelectPickup_IsInPosition, void*, void*)
+GAME_HOOK(offsets::MoleMole::LCSelectPickup::IsOutPosition, bool, LCSelectPickup_IsOutPosition, void*, void*)
+
+GAME_HOOK(offsets::MoleMole::VCBaseSetDitherValue::get_DitherAlphaValue, float, get_DitherAlphaValue, void*)
+
+GAME_HOOK(offsets::MoleMole::CriwareMediaPlayer::OnStartPlay, void, CriwareMediaPlayer_OnStartPlay, void*)
+GAME_HOOK(offsets::MoleMole::CriwareVideoPluginImplement::AsyncPlayLike, void, VideoBridge_AsyncPlayLike, void*)
+
+GAME_HOOK(offsets::MoleMole::MonoLoginScene::Update, void, MonoLoginScene_Update, void*)
+GAME_HOOK(offsets::MoleMole::MonoLoginScene::OpenDoor, void, MonoLoginScene_OpenDoor, void*, void*)
+GAME_HOOK(offsets::MoleMole::MonoLoadingCanvas::Start, void, MonoLoadingCanvas_Start, void*)
+
+GAME_HOOK(offsets::UnityEngine::UI_Image::set_sprite, void, Image_set_sprite, void*,void*)
+
+GAME_HOOK(offsets::MoleMole::ActorUtils::OnEnterSceneDone, void, ActorUtils_OnEnterSceneDone,)
+
+GAME_HOOK(offsets::MoleMole::MiHoYo_SDK_ConfirmWithJoypad::Awake, void, ConfirmWithJoypad_Awake,void*)
+GAME_HOOK(offsets::MoleMole::MiHoYo_SDK_ConfirmWithJoypad::OnTapCancel, void, ConfirmWithJoypad_OnTapCancel,void*)
+GAME_HOOK(offsets::MoleMole::MiHoYo_SDK_ConfirmWithJoypad::OnTapAccept, void, ConfirmWithJoypad_OnTapAccept,void*)
+GAME_HOOK(offsets::MoleMole::MiHoYo_SDK_ConfirmWithJoypad::Update, void, ConfirmWithJoypad_Update,void*)
+
+GAME_HOOK(offsets::MoleMole::LuaLimitRegionTask::TickInternal, void, LuaLimitRegionTask_TickInternal,void*)
+//test
