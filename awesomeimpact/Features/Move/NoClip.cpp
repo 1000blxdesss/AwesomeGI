@@ -1,7 +1,7 @@
-﻿#include "NoClip.h"
+#include "NoClip.h"
 #include "../../Utils/HookRegistry.h"
 #include "../../GUI/gui.h"
-#include "../../Utils/test02.h"
+#include "../../Utils/XorStr.h"
 
 #include <optional>
 
@@ -33,26 +33,28 @@ namespace
 
     Vector3 BuildMoveDirection(void* cameraTransform)
     {
-        if (!cameraTransform)return {};
+        if (!cameraTransform) return {};
 
-        const auto forward = UnityUtils::Transform_get_forward(cameraTransform);
-        const auto right = UnityUtils::Transform_get_right(cameraTransform);
+        auto forward = UnityUtils::Transform_get_forward(cameraTransform);
+        auto right = UnityUtils::Transform_get_right(cameraTransform);
+        forward.y = 0.f;
+        right.y = 0.f;
 
         Vector3 dir{};
         if (GetAsyncKeyState('W') & 0x8000) dir = dir + forward;
         if (GetAsyncKeyState('S') & 0x8000) dir = dir - forward;
         if (GetAsyncKeyState('D') & 0x8000) dir = dir + right;
         if (GetAsyncKeyState('A') & 0x8000) dir = dir - right;
+
+        const float horiz = std::sqrt(dir.x * dir.x + dir.z * dir.z);
+        if (horiz > 0.001f)
+        {
+            dir.x /= horiz;
+            dir.z /= horiz;
+        }
+
         if (GetAsyncKeyState(VK_SPACE) & 0x8000) dir.y += 1.0f;
         if (GetAsyncKeyState(VK_LSHIFT) & 0x8000) dir.y -= 1.0f;
-
-        const float length = dir.magnitude();
-        if (length > 0.001f)
-        {
-            dir.x /= length;
-            dir.y /= length;
-            dir.z /= length;
-        }
 
         return dir;
     }
@@ -123,6 +125,7 @@ HOOK_INSTALL(HumanoidMoveFSM_LateTick, NoClip_LateTick)
 
     UnityUtils::Rigidbody_set_isKinematic(rigidbody, false);
     ret_orig();
+    UnityUtils::Rigidbody_set_velocity(rigidbody, {});
 
     if (dir.zero())return;
 
