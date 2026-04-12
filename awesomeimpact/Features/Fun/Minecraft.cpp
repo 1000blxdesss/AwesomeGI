@@ -33,11 +33,8 @@ namespace {
 
 
     inline Il2CppString* CachedStr(const char* s)
-    {
-        static std::unordered_map<const char*, Il2CppString*> cache;
-        auto& entry = cache[s];
-        if (!entry) entry = UnityUtils::PtrToStringAnsi((void*)s);
-        return entry;
+    { // бля, я забыл, что так делать нельзя
+        return UnityUtils::PtrToStringAnsi((void*)s);
     }
 
     inline Vector3 NormalizeOr(Vector3 v, Vector3 fallback)
