@@ -32,7 +32,7 @@ namespace {
         auto* avatarGO = UnityUtils::BaseEntity_rootObject(localAvatar);
         if (!avatarGO) return nullptr;
 
-        static Il2CppString* toolName =
+        Il2CppString* toolName =
             UnityUtils::PtrToStringAnsi((void*)XS("MonoVisualEntityTool"));
 
         return UnityUtils::GameObject_GetComponentByName(avatarGO, toolName);
