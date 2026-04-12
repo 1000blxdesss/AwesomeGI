@@ -1,8 +1,8 @@
-﻿#include "BowTp.h"
+#include "BowTp.h"
 #include "../../GUI/gui.h"
 #include "../../globals.h"
 #include "../../Utils/HookRegistry.h"
-#include "../../Utils/test02.h"
+#include "../../Utils/XorStr.h"
 
 static BowTpFeature* self{ nullptr };
 BowTpFeature::BowTpFeature()
@@ -22,15 +22,17 @@ namespace {
         g_arrowEntity = nullptr;
         g_pendingBowTp = false;
     }
-
     UPDATE_HOOK(BowTP)
     {
-        if (!g_pendingBowTp || !self || !self->Active())return;
-
-        g_pendingBowTp = false;
+        if (!self || !self->Active() || !g_pendingBowTp)
+            return;
 
         auto* localAvatar = OtherUtils::AvatarManager();
-        if (!localAvatar || !g_arrowEntity) return;
+        if (!localAvatar || !g_arrowEntity)
+        {
+            ClearArrow();
+            return;
+        }
 
         if (OtherUtils::IsEntityRemoved(g_arrowEntity))
         {
@@ -62,8 +64,8 @@ void AddEntity_Hook(void* entityManager, void* baseEntity)
         return;
 
     auto* owner = UnityUtils::GetEntityOwner(baseEntity);
-    if (!owner || owner != localAvatar || OtherUtils::GetEntityType(owner) != EntityType::Avatar)
-        return;
+	
+    if (!owner || owner != localAvatar || OtherUtils::GetEntityType(owner) != EntityType::Avatar) return;
 
     g_arrowEntity = baseEntity;
     g_pendingBowTp = true;
