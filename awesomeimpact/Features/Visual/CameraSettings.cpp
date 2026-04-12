@@ -102,7 +102,7 @@ namespace {
         auto* avatarGO = UnityUtils::BaseEntity_rootObject(localAvatar);
         if (!avatarGO) return;
 
-        static Il2CppString* toolName =
+        Il2CppString* toolName =
             UnityUtils::PtrToStringAnsi((void*)XS("MonoVisualEntityTool"));
 
         auto* visualTool = UnityUtils::GameObject_GetComponentByName(avatarGO, toolName);
@@ -130,7 +130,7 @@ namespace {
 
     inline void ApplyFirstPerson(void* camera, void* localAvatar)
     {
-        static Il2CppString* animatorName =
+        Il2CppString* animatorName =
             UnityUtils::PtrToStringAnsi((void*)XS("Animator"));
 
         auto* animator = UnityUtils::GameObject_GetComponentByName(
