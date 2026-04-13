@@ -4,6 +4,7 @@ Discord: https://discord.gg/z7EP5CpFTA
 
 <img width="1540" height="820" alt="image" src="https://github.com/user-attachments/assets/a28ea576-dc03-4d0e-b283-663d87b37071" />
 
+Download 6.5: https://github.com/1000blxdesss/AwesomeGI/releases/download/6.5/publish.rar
 
 ### Default (3)
 - [**Fly In Main Menu**](MAIN/Default/fly-in-main-menu.md)
