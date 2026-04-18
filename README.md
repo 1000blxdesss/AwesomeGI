@@ -1,6 +1,6 @@
 [!!!Click!!!](https://github.com/1000blxdesss/Genshin-Impact-Dump-collection)
 
-Discord: [https://discord.gg/z7EP5CpFTA](https://discord.gg/W9PvK8KHPT)
+Discord: https://discord.gg/W9PvK8KHPT
 
 <img width="1540" height="820" alt="image" src="https://github.com/user-attachments/assets/a28ea576-dc03-4d0e-b283-663d87b37071" />
 
